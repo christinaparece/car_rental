@@ -1,0 +1,53 @@
+
+INSERT INTO customer(first_name, last_name) 
+VALUES
+('Christina', 'Parece'),
+('Beasty', 'Parece'),
+('Jasmine', 'Parece'),
+('Bella', 'Parece'),
+('Benjamin', 'Parece');
+
+INSERT INTO salesperson(first_name, last_name, customer_id)
+VALUES
+('Michael','Scott', 1),
+('Dwight', 'Schrute', 2),
+('Pam', 'Bessly', 3),
+('Andy', 'Bernard', 4),
+('Ryan', 'Howard', 5);
+
+INSERT INTO car(make, model, license, price, customer_id, salesperson_id)
+VALUES
+('Honda', 'CRV', '1ABCDE', '18000', '1', '1'),
+('Ford', 'Mustang', '2QWERT', '28000', '2', '2'),
+('Nissan', 'Ultima', '3TYUIO', '22000', '3', '3'),
+('Honda', 'Accord', '4GHJKL', '19000', '4', '4'),
+('Ford', 'Fusion', '5MNBVC', '210000', '5','5');
+
+
+INSERT INTO invoice(car_id, customer_id, salesperson_id)
+VALUES
+('1','1','1'),
+('2','2','2'),
+('3','3','3'),
+('4','4','4'),
+('5','5','5');
+
+INSERT INTO mechanic(first_name, last_name)
+VALUES
+('Dominic', 'Toretto'),
+('Brian', 'OConnor'),
+('Letty', 'Ortiz'),
+('Mia', 'Toretto'),
+('Luke', 'Hobbs');
+
+INSERT INTO service_ticket(service_amount, car_parts, car_id, customer_id, mechanic_id)
+VALUES
+('1120', 'rear breaks', '1','1','1'),
+('150', 'passenger tire replacement','2','2','2'),
+('12', 'headlight', '3','3','3'),
+('4367', 'transmission replacement', '4','4','4'),
+('59', 'oil change', '5','5','5');
+
+
+--
+SELECT * FROM car

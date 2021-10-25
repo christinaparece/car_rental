@@ -1,0 +1,22 @@
+CREATE or REPLACE FUNCTION add_salesperson
+(_first_name VARCHAR(50),
+ _last_name VARCHAR(50), 
+_customer_id INTEGER)
+RETURNS void
+AS
+$$  
+BEGIN
+INSERT INTO salesperson(first_name, last_name, customer_id)
+VALUES (_first_name, _last_name, _customer_id);
+END
+$$  
+LANGUAGE plpgsql
+
+SELECT add_salesperson('Toby', 'Flenderson', '5')
+
+
+
+
+---
+SELECT * FROM salesperson
+
